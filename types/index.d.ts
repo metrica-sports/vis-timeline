@@ -39,7 +39,7 @@ export type DateType = Date | number | string;
 export type HeightWidthType = IdType;
 export type TimelineItemType = 'box' | 'point' | 'range' | 'background';
 export type TimelineAlignType = 'auto' | 'center' | 'left' | 'right';
-export type TimelineTimeAxisScaleType = 'millisecond' | 'second' | 'minute' | 'hour' |
+export type TimelineTimeAxisScaleType = 'millisecond' | 'frame' | 'second' | 'minute' | 'hour' |
   'weekday' | 'day' | 'week' | 'month' | 'year';
 export type TimelineEventPropertiesResultWhatType = 'item' | 'background' | 'axis' |
   'group-label' | 'custom-time' | 'current-time';
@@ -144,7 +144,7 @@ export interface TimelineEditableOption {
   overrideItems?: boolean;
 }
 
-export type TimelineFormatLabelsFunction = (date: Date, scale: string, step: number) => string;
+export type TimelineFormatLabelsFunction = (date: Date, scale: string, step: number, width?: number) => string;
 
 export interface TimelineFormatLabelsOption {
   millisecond?: string;
@@ -302,6 +302,9 @@ export interface TimelineOptions {
   showMinorLabels?: boolean;
   showWeekScale?: boolean;
   showTooltips?: boolean;
+  showFrameScale?: boolean;
+  minimumScale?: string;
+  millisecondsPerFrame?: number;
   stack?: boolean;
   stackSubgroups?: boolean;
   snap?: TimelineOptionsSnapType;
