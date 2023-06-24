@@ -538,6 +538,10 @@ export class Graph2d {
   setOptions(options: TimelineOptions): void;
   setSelection(ids: IdType | IdType[]): void;
   setWindow(start: DateType, end: DateType, options?: TimelineAnimationOptions): void;
+  toScreen(time: Date): number;
+  toGlobalScreen(time: Date): number;
+  toTime(x: number): Date;
+  toGlobalTime(x: number): Date;
 }
 
 export interface Graph2d {
@@ -705,6 +709,37 @@ export class Timeline {
    * @param callback The callback function
    */
   setWindow(start: DateType, end: DateType, options?: TimelineAnimationOptions, callback?: () => void): void;
+
+  /**
+   * Convert a datetime (Date object) into a position on the screen
+   * @param {Date}   time A date
+   * @return {int}   x    The position on the screen in pixels which corresponds
+   *                      with the given date.
+   */
+  toScreen(time: Date): number;
+
+  /**
+   * Convert a datetime (Date object) into a position on the root
+   * This is used to get the pixel density estimate for the screen, not the center panel
+   * @param {Date}   time A date
+   * @return {int}   x    The position on root in pixels which corresponds
+   *                      with the given date.
+   */
+  toGlobalScreen(time: Date): number;
+
+  /**
+   * Convert a position on screen (pixels) to a datetime
+   * @param {int}     x    Position on the screen in pixels
+   * @return {Date}   time The datetime the corresponds with given position x
+   */
+  toTime(x: number): Date;
+
+  /**
+   * Convert a position on the global screen (pixels) to a datetime
+   * @param {int}     x    Position on the screen in pixels
+   * @return {Date}   time The datetime the corresponds with given position x
+   */
+  toGlobalTime(x: number): Date;
 
   /**
    * Toggle rollingMode.
