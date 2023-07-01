@@ -87,6 +87,7 @@ export interface LegendOptions {
 export interface DataItem {
   className?: string;
   content: string;
+  order: number;
   end?: DateType;
   group?: any;
   id?: IdType;
