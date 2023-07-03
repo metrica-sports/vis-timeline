@@ -1,6 +1,6 @@
 {
   "name": "@metrica-sports/vis-timeline",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Create a fully customizable, interactive timeline with items and ranges.",
   "homepage": "https://visjs.github.io/vis-timeline/",
   "license": "(Apache-2.0 OR MIT)",
@@ -126,6 +126,7 @@
     "Martin Fischer <Arthur.Spooner@gmail.com>",
     "Brad Hards <bradh@frogmouth.net>",
     "Chris Jackson <chris@cd-jackson.com>",
+    "Fran Carrascosa <fran@metrica-sports.com>",
     "Lewis B <lewisjb@users.noreply.github.com>",
     "Brendon Page <brendon.page@chillisoft.co.za>",
     "Manuel Schallar <manuel.schallar@iaik.tugraz.at>",
@@ -156,7 +157,6 @@
     "Eric Kitaif <eric.kitaif@gmail.com>",
     "David Anderson <eymiha@gmail.com>",
     "fabriziofortino <fabrizio.fortino@gmail.com>",
-    "Fran Carrascosa <fran@metrica-sports.com>",
     "Graham J <grahamj@users.noreply.github.com>",
     "Mike Pilone <mpilone@npr.org>",
     "Oleg Yapparov <oleg.yapparov@gmail.com>",
