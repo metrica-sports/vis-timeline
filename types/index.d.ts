@@ -645,7 +645,7 @@ export class Timeline {
    * Force a redraw of the Timeline. The size of all items will be recalculated.
    * Can be useful to manually redraw when option autoResize=false and the window has been resized, or when the items CSS has been changed.
    */
-  redraw(): void;
+  redraw(refreshItems: boolean, restackGroups: boolean): void;
 
   /**
    * Remove vertical bars previously added to the timeline via addCustomTime method.
