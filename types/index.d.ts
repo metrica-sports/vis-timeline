@@ -122,6 +122,7 @@ export interface DataGroup {
   visible?: boolean;
   showNested?: boolean;
   subgroupVisibility?: SubGroupVisibilityOptions;
+  isVisibleOverride?: boolean; 
 }
 
 export interface DataGroupOptions {
